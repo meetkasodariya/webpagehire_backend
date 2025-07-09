@@ -31,3 +31,16 @@ exports.hireDeveloper = async (req, res) => {
     res.status(400).json({ error: err.message });
   }
 };
+exports.deleteDeveloper = async (req, res) => {
+  try {
+    const developer = await Developer.findByIdAndDelete(req.params.id);
+    
+    if (!developer) {
+      return res.status(404).json({ error: 'Developer not found' });
+    }
+    
+    res.json({ message: 'Developer deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
