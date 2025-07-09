@@ -6,18 +6,12 @@ require('dotenv').config();
 const app = express();
  const PORT =process.env.PORT || 5000;
 
-// Middleware
-
+// Middlewar
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-
-
-// Allow requests from your GitHub Pages site
 app.use(cors({
   origin: 'https://meetkasodariya.github.io/hiring_page/'
 }));
-
 // Database connection
 connectDB();
 app.get('/', (req, res) => {
