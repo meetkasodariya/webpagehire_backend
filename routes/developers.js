@@ -10,5 +10,5 @@ const router = express.Router();
 router.get('/', getAllDevelopers);
 router.post('/', createDeveloper);
 router.put('/:id/hire', hireDeveloper);
-
+router.delete('/:id', deleteDeveloper);
 module.exports = router;
