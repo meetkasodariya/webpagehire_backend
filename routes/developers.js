@@ -2,7 +2,8 @@ const express = require('express');
 const {
   getAllDevelopers,
   createDeveloper,
-  hireDeveloper
+  hireDeveloper,
+  deleteDeveloper
 } = require('../controllers/developers');
 
 const router = express.Router();
