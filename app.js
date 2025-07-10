@@ -9,10 +9,7 @@ const app = express();
 // Middlewar
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-  origin: 'https://meetkasodariya.github.io/hiring_page/',
-  credentials: true
-}));
+app.use(cors());
 // Database connection
 connectDB();
 app.get('/', (req, res) => {
