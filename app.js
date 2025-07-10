@@ -10,7 +10,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: 'https://meetkasodariya.github.io/hiring_page/'
+  origin: 'https://meetkasodariya.github.io/hiring_page/',
+  credentials: true
 }));
 // Database connection
 connectDB();
