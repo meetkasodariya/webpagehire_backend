@@ -6,8 +6,7 @@ const {
   deleteDeveloper
 } = require('../controllers/developers');
 
-const router = express.Router()
-;
+const router = express.Router();
 
 router.get('/', getAllDevelopers);
 router.post('/', createDeveloper);
