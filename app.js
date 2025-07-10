@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   res.send('API is running...');
 });
 // Routes
-app.use('/api/developers', developersRouter);
+app.use('/api/developers',developersRouter);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
